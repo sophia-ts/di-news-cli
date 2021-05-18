@@ -1,0 +1,34 @@
+import requests
+from bs4 import BeautifulSoup
+import os
+
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
+
+page = requests.get("https://di.ionio.gr/gr/news/all-news-f1-news-announcements/")
+soup = BeautifulSoup(page.content,"html.parser")
+anchor_links = soup.find_all("a", {"class":"news-list-title"},href=True)
+
+
+anouncements = []
+for anchor in anchor_links:
+    anouncements.append(anchor.get_text())
+
+for i in range (len(anouncements)):
+    print(i,"- ",anouncements[i],"\n")
+
+print("Enter the number of your choice: ")
+selected_number = input()
+
+anouncement_url = anchor_links[int(selected_number)]["href"]
+new_page = requests.get(anouncement_url)
+
+soup_new = BeautifulSoup(new_page.content,"html.parser")
+divs = soup_new.find_all("div", {"class":"news-read-text"})
+content = [divs[i].get_text() for i in range(len(divs))]
+content = content[0].replace('\r', '')
+
+cls()
+
+print(content)
+
