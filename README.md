@@ -6,9 +6,9 @@ di-news-cli is a web scraper for the official website of [Ionian University](htt
 
 To install the CLI you should clone the repository locally on your device
 
-`git clone git@github.com:sophia-ts/di-news-cli.git`
+`git clone https://github.com/sophia-ts/di-news-cli.git`
 
-After that all you have to do is write on your temrinal the following command: 
+After that, all you have to do is to go to the path you installed the CLI and write on your temrinal the following command: 
 
 `sudo python setup.py install`
 
