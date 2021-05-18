@@ -1,6 +1,6 @@
 # di-news-cli
 
-di-news-cli is a wed scrapper for the offiial website of [Ionian University](https://di.ionio.gr/). With this CLI it is possible to read the website's anouncemnts!
+di-news-cli is a web scraper for the official website of [Ionian University](https://di.ionio.gr/). With this CLI it is possible to read the website's anouncemnts!
 
 # Installation
 
